@@ -1,0 +1,20 @@
+idx,model,dataset,data_type,reported_accuracy,paper,link
+1,VGG16 (no aug),Parkinsons Drawings,wave,92.00% test,"Huang 2024, Information 15(4):220",https://www.mdpi.com/2078-2489/15/4/220
+2,VGG16 (no aug),Parkinsons Drawings,spiral,77.34% test,"Huang 2024, Information 15(4):220",https://www.mdpi.com/2078-2489/15/4/220
+3,VGG19 (rot+flip aug),Parkinsons Drawings,wave,96.67% test,"Huang 2024, Information 15(4):220",https://www.mdpi.com/2078-2489/15/4/220
+4,VGG19 (cosine annealing),Parkinsons Drawings,spiral,87.66% test,"Huang 2024, Information 15(4):220",https://www.mdpi.com/2078-2489/15/4/220
+5,ResNet18 (mixup),Parkinsons Drawings,wave,"93.00% test, MCC 0.94","Huang 2024, Information 15(4):220",https://www.mdpi.com/2078-2489/15/4/220
+6,ResNet50 (no aug),Parkinsons Drawings,wave,94.34% test,"Huang 2024, Information 15(4):220",https://www.mdpi.com/2078-2489/15/4/220
+7,ResNet50 (no aug),Parkinsons Drawings,spiral,89.14% test,"Huang 2024, Information 15(4):220",https://www.mdpi.com/2078-2489/15/4/220
+8,ResNet101 (mixup),Parkinsons Drawings,wave,"96.67% test, MCC 0.94","Huang 2024, Information 15(4):220",https://www.mdpi.com/2078-2489/15/4/220
+9,ViT (no aug),Parkinsons Drawings,spiral,93.33% test,"Huang 2024, Information 15(4):220",https://www.mdpi.com/2078-2489/15/4/220
+10,ViT (no aug),Parkinsons Drawings,wave,96.67% test,"Huang 2024, Information 15(4):220",https://www.mdpi.com/2078-2489/15/4/220
+11,Improved VGG-19 (transfer),Parkinsons Drawings,spiral,91.36% test,Frontiers in Medicine 2024:1453743,https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2024.1453743/full
+12,VGG16 + CNN pipeline,Parkinsons Drawings,spiral+wave,ResNet50 87% on wave,"AIMS Mathematics 2024, 9(10)",https://www.aimspress.com/article/doi/10.3934/math.2024334
+13,DL framework (transfer),Parkinsons Drawings (Kaggle),spiral/wave,~87% (abstract),"Razaq 2025, Diagnostics 15(21):2795",https://www.mdpi.com/2075-4418/15/21/2795
+14,MobileNet-based pipeline,PD Drawings + others (800 imgs),spiral,91.36% (as cited in Huang 2024),"Basnin 2021, Comput Intell Neurosci",via https://www.mdpi.com/2078-2489/15/4/220
+15,Custom CNN (10-fold),spiral/wave,"spiral, wave",89% spiral / 88% wave (as cited in Huang 2024),Shaban 2020,via https://www.mdpi.com/2078-2489/15/4/220
+16,SVM + LogReg (patient-level),HandPD + NewHandPD,"spiral, meander",94.44% patient-level,"ML4H 2021, arXiv:2111.14781",https://arxiv.org/abs/2111.14781
+17,SVM on kinematic features,online handwriting (PaHaW-style),various,85.61%,"Drotar 2014, CMPB 117(3):405-411",https://doi.org/10.1016/j.cmpb.2014.09.005 (unverified)
+18,Kinematic classifier (14 features),digitized spirals (62 subj),guided spiral,exact value in paper (unverified),"Zham 2016, IEEE EMBC 5007-5010",https://doi.org/10.1109/EMBC.2016.7791670 (unverified)
+19,OPF/SVM texture descriptors,HandPD,"spiral, meander",numbers in paper (unverified here),"Pereira 2016, CMPB 136:79-88",https://www.sciencedirect.com/science/article/pii/S0169260716301894

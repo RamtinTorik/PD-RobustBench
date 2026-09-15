@@ -1,0 +1,7 @@
+[train] device=cpu
+[train] dataset stats: {"spiral|training|healthy": 36, "spiral|training|parkinson": 36, "spiral|testing|healthy": 15, "spiral|testing|parkinson": 15, "wave|training|healthy": 36, "wave|training|parkinson": 36, "wave|testing|healthy": 15, "wave|testing|parkinson": 15, "spiral|train|healthy": 52, "spiral|train|parkinson": 208, "spiral|test|healthy": 20, "spiral|test|parkinson": 88, "meander|train|healthy": 52, "meander|train|parkinson": 208, "meander|test|healthy": 20, "meander|test|parkinson": 88}
+[train] datasets: ['handpd_meander', 'handpd_spiral', 'pdraw_spiral', 'pdraw_wave']
+[train] handpd_meander   resnet50         val_auc_head=0.974 val_auc_ft=0.988 thr=0.90 (317.9s)
+[train] handpd_meander   vgg16            val_auc_head=0.960 val_auc_ft=0.976 thr=0.60 (607.3s)
+[train] handpd_meander   efficientnet_b0  val_auc_head=0.933 val_auc_ft=0.967 thr=0.75 (64.5s)
+[train] done -> C:\Users\ramti\Desktop\ramtin legion pc\article_project\checkpoints\training_summary.csv

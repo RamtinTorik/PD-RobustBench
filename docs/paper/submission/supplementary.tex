@@ -1,0 +1,113 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.4cm]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf}
+
+\title{\textbf{PD-RobustBench -- Supplementary Material}\\
+\large Corruption-Robustness and Explainability Evaluation for
+PD Detection from Hand-Drawn Images}
+\author{Torik, Abedini, Peyvandi}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{S1. Validation-selected decision thresholds}
+Per-model decision thresholds chosen on the validation split to maximize
+balanced accuracy (Section~3.2 of the main text). The same threshold is
+applied to the clean and to every corrupted condition of that model.
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{llc}
+\toprule
+Dataset & Model & Threshold \\
+\midrule
+\input{table_thresholds_rows.tex}
+\bottomrule
+\end{tabular}
+\caption{Validation-selected decision thresholds.}
+\end{table}
+
+\section*{S2. Bootstrap confidence intervals for clean metrics}
+Bootstrap 95\% intervals (2{,}000 resamples of per-image predictions, seed 42)
+for clean accuracy and ROC-AUC. Intervals are wide because test sets contain
+30 (PDRAW) or 108 (HandPD) images; see the Uncertainty paragraph in the
+main text.
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{lllc}
+\toprule
+Dataset & Model & Metric & Point estimate [95\% CI] \\
+\midrule
+\input{table_ci_rows.tex}
+\bottomrule
+\end{tabular}
+\caption{Clean test metrics with bootstrap 95\% confidence intervals.}
+\end{table}
+
+\section*{S3. PRS weight-sensitivity analysis}
+PRS recomputed under the main weighting $(0.50, 0.30, 0.20)$, a
+performance-only weighting $(0.70, 0.30, 0.00)$, and an equal weighting
+$(1/3, 1/3, 1/3)$. The model ranking per image type is identical under all
+three weightings (Spearman $\rho = 1.0$); the performance-only weighting
+yields a clipped score of 100 for EfficientNet-B0 on PDRAW--wave because its
+net degradation over the severity range is non-positive.
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{llccc}
+\toprule
+Dataset & Model & $w=(.5,.3,.2)$ & $(.7,.3,0)$ & $(1/3,\,1/3,\,1/3)$ \\
+\midrule
+\input{table_prs_sens_rows.tex}
+\bottomrule
+\end{tabular}
+\caption{PRS under alternative weightings (clipped to $[0,100]$).}
+\end{table}
+
+\section*{S4. Degradation curves for the remaining image types}
+Figure~4 of the main text shows balanced accuracy versus severity for
+PDRAW--spiral. The corresponding curves for the other three image types are
+shown below; the qualitative pattern (rotation most damaging, contrast
+benign, family-specific backbone rankings) is consistent across all types.
+Full per-corruption, per-severity metric tables for all twelve
+configurations are provided as machine-readable CSVs in the released
+repository (\texttt{results/robustness\_results.csv} and
+\texttt{results/robustness\_breakdown.csv}), together with per-image
+predictions.
+
+\begin{figure}[h]
+\centering\small
+\includegraphics[width=0.98\linewidth]{figures/fig_curves_pdraw_wave.png}
+\caption{PDRAW--wave.}
+\end{figure}
+
+\begin{figure}[h]
+\centering\small
+\includegraphics[width=0.98\linewidth]{figures/fig_curves_handpd_spiral.png}
+\caption{HandPD--spiral.}
+\end{figure}
+
+\begin{figure}[h]
+\centering\small
+\includegraphics[width=0.98\linewidth]{figures/fig_curves_handpd_meander.png}
+\caption{HandPD--meander.}
+\end{figure}
+
+\section*{S5. Grad-CAM randomization control}
+As reported in Section~5.3 of the main text, replacing the trained head and
+fine-tuned last stage with freshly initialized parameters collapses the rank
+agreement with the trained models' clean Grad-CAM maps (mean Spearman on the
+PDRAW--spiral subset: ResNet50 0.23, VGG16 $-0.15$, EfficientNet-B0 0.04,
+where the untrained EfficientNet produces constant maps). Per-image values
+are released as \texttt{results/gradcam\_sanity.csv}. This control supports
+that the measured corruption effects (Section~5) reflect model-specific
+learned evidence rather than input-only structure, while leaving the
+stability-versus-validity distinction of the main text unchanged.
+
+\end{document}

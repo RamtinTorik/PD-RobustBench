@@ -1,0 +1,46 @@
+C:\Users\ramti\Desktop\ramtin legion pc\article_project\src\run_xai.py:133: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  "pearson_clean": round(float(pearsonr(
+C:\Users\ramti\Desktop\ramtin legion pc\article_project\src\run_xai.py:135: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  "spearman_clean": round(float(spearmanr(
+[xai] pdraw_spiral: subset of 10 images, models=['resnet50', 'vgg16', 'efficientnet_b0', 'mobilenet_v3_large'], seed=43
+  resnet50         V09HE01: done
+  resnet50         V55HE14: done
+  resnet50         V08HE01: done
+  resnet50         V07HE01: done
+  resnet50         V55HE15: done
+  resnet50         V03PE01: done
+  resnet50         V11PE03: done
+  resnet50         V08PE01: done
+  resnet50         V06PE01: done
+  resnet50         V03PE07: done
+  vgg16            V09HE01: done
+  vgg16            V55HE14: done
+  vgg16            V08HE01: done
+  vgg16            V07HE01: done
+  vgg16            V55HE15: done
+  vgg16            V03PE01: done
+  vgg16            V11PE03: done
+  vgg16            V08PE01: done
+  vgg16            V06PE01: done
+  vgg16            V03PE07: done
+  efficientnet_b0  V09HE01: done
+  efficientnet_b0  V55HE14: done
+  efficientnet_b0  V08HE01: done
+  efficientnet_b0  V07HE01: done
+  efficientnet_b0  V55HE15: done
+  efficientnet_b0  V03PE01: done
+  efficientnet_b0  V11PE03: done
+  efficientnet_b0  V08PE01: done
+  efficientnet_b0  V06PE01: done
+  efficientnet_b0  V03PE07: done
+  mobilenet_v3_large V09HE01: done
+  mobilenet_v3_large V55HE14: done
+  mobilenet_v3_large V08HE01: done
+  mobilenet_v3_large V07HE01: done
+  mobilenet_v3_large V55HE15: done
+  mobilenet_v3_large V03PE01: done
+  mobilenet_v3_large V11PE03: done
+  mobilenet_v3_large V08PE01: done
+  mobilenet_v3_large V06PE01: done
+  mobilenet_v3_large V03PE07: done
+[xai] saved -> ..\results\parts\s43\xai_pdraw_spiral.csv

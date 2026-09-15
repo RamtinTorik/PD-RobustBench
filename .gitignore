@@ -1,0 +1,28 @@
+# Local datasets and extracted samples
+data/raw/
+data/handpd_tmp/
+data/*.zip
+
+# Trained model weights are too large for a regular GitHub repository.
+checkpoints/*.pt
+
+# Generated Grad-CAM arrays are reproducible and exceed repository needs.
+xai_outputs/
+
+# Python and experiment-local caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Local environment and editor files
+.env
+.venv/
+venv/
+.idea/
+.vscode/
+
+# OS metadata
+.DS_Store
+Thumbs.db

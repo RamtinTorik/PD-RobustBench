@@ -1,0 +1,17 @@
+dataset,model,accuracy,balanced_accuracy,precision,sensitivity,specificity,f1,auc
+handpd_meander,efficientnet_b0,0.8333,0.8205,0.9487,0.8409,0.8,0.8916,0.8233
+handpd_meander,mobilenet_v3_large,0.7593,0.775,0.9429,0.75,0.8,0.8354,0.8352
+handpd_meander,resnet50,0.8519,0.7932,0.9286,0.8864,0.7,0.907,0.8574
+handpd_meander,vgg16,0.8981,0.8602,0.9529,0.9205,0.8,0.9364,0.8568
+handpd_spiral,efficientnet_b0,0.8426,0.9034,1.0,0.8068,1.0,0.8931,0.9778
+handpd_spiral,mobilenet_v3_large,0.8704,0.8432,0.9512,0.8864,0.8,0.9176,0.9443
+handpd_spiral,resnet50,0.8796,0.8875,0.9747,0.875,0.9,0.9222,0.9716
+handpd_spiral,vgg16,0.8889,0.8159,0.9318,0.9318,0.7,0.9318,0.9165
+pdraw_spiral,efficientnet_b0,0.7667,0.7667,0.7857,0.7333,0.8,0.7586,0.8667
+pdraw_spiral,mobilenet_v3_large,0.8,0.8,0.8462,0.7333,0.8667,0.7857,0.9244
+pdraw_spiral,resnet50,0.7333,0.7333,0.6522,1.0,0.4667,0.7895,0.9244
+pdraw_spiral,vgg16,0.7333,0.7333,1.0,0.4667,1.0,0.6364,0.8178
+pdraw_wave,efficientnet_b0,0.7333,0.7333,0.6842,0.8667,0.6,0.7647,0.9378
+pdraw_wave,mobilenet_v3_large,0.9,0.9,0.9286,0.8667,0.9333,0.8966,0.9289
+pdraw_wave,resnet50,0.8,0.8,0.7647,0.8667,0.7333,0.8125,0.9067
+pdraw_wave,vgg16,0.9,0.9,0.9286,0.8667,0.9333,0.8966,0.8978

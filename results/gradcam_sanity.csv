@@ -1,0 +1,41 @@
+dataset,model,image,spearman_trained_vs_untrained,note
+pdraw_spiral,resnet50,V09HE01.png,0.4868,
+pdraw_spiral,resnet50,V55HE14.png,0.0392,
+pdraw_spiral,resnet50,V08HE01.png,0.1966,
+pdraw_spiral,resnet50,V07HE01.png,0.381,
+pdraw_spiral,resnet50,V55HE15.png,-0.0353,
+pdraw_spiral,resnet50,V03PE01.png,0.0533,
+pdraw_spiral,resnet50,V11PE03.png,0.414,
+pdraw_spiral,resnet50,V08PE01.png,0.13,
+pdraw_spiral,resnet50,V06PE01.png,0.2295,
+pdraw_spiral,resnet50,V03PE07.png,0.4372,
+pdraw_spiral,vgg16,V09HE01.png,-0.4458,
+pdraw_spiral,vgg16,V55HE14.png,-0.203,
+pdraw_spiral,vgg16,V08HE01.png,-0.5339,
+pdraw_spiral,vgg16,V07HE01.png,-0.7214,
+pdraw_spiral,vgg16,V55HE15.png,0.1443,
+pdraw_spiral,vgg16,V03PE01.png,0.3138,
+pdraw_spiral,vgg16,V11PE03.png,0.0112,
+pdraw_spiral,vgg16,V08PE01.png,-0.359,
+pdraw_spiral,vgg16,V06PE01.png,-0.0318,
+pdraw_spiral,vgg16,V03PE07.png,0.2855,
+pdraw_spiral,efficientnet_b0,V09HE01.png,0.0,constant map
+pdraw_spiral,efficientnet_b0,V55HE14.png,0.0,constant map
+pdraw_spiral,efficientnet_b0,V08HE01.png,0.0,constant map
+pdraw_spiral,efficientnet_b0,V07HE01.png,0.2571,
+pdraw_spiral,efficientnet_b0,V55HE15.png,0.0,constant map
+pdraw_spiral,efficientnet_b0,V03PE01.png,0.0,constant map
+pdraw_spiral,efficientnet_b0,V11PE03.png,0.3404,
+pdraw_spiral,efficientnet_b0,V08PE01.png,0.0,constant map
+pdraw_spiral,efficientnet_b0,V06PE01.png,0.0,constant map
+pdraw_spiral,efficientnet_b0,V03PE07.png,-0.235,
+pdraw_spiral,mobilenet_v3_large,V09HE01.png,-0.21,
+pdraw_spiral,mobilenet_v3_large,V55HE14.png,-0.1537,
+pdraw_spiral,mobilenet_v3_large,V08HE01.png,0.0196,
+pdraw_spiral,mobilenet_v3_large,V07HE01.png,0.6726,
+pdraw_spiral,mobilenet_v3_large,V55HE15.png,-0.1907,
+pdraw_spiral,mobilenet_v3_large,V03PE01.png,0.2648,
+pdraw_spiral,mobilenet_v3_large,V11PE03.png,-0.1214,
+pdraw_spiral,mobilenet_v3_large,V08PE01.png,-0.1529,
+pdraw_spiral,mobilenet_v3_large,V06PE01.png,0.3011,
+pdraw_spiral,mobilenet_v3_large,V03PE07.png,0.2591,

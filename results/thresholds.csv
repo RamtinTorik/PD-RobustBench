@@ -1,0 +1,17 @@
+dataset,model,threshold
+handpd_meander,resnet50,0.9
+handpd_meander,vgg16,0.6
+handpd_meander,efficientnet_b0,0.75
+handpd_meander,mobilenet_v3_large,0.95
+handpd_spiral,resnet50,0.95
+handpd_spiral,vgg16,0.44999999999999996
+handpd_spiral,efficientnet_b0,0.49999999999999994
+handpd_spiral,mobilenet_v3_large,0.44999999999999996
+pdraw_spiral,resnet50,0.49999999999999994
+pdraw_spiral,vgg16,0.49999999999999994
+pdraw_spiral,efficientnet_b0,0.49999999999999994
+pdraw_spiral,mobilenet_v3_large,0.49999999999999994
+pdraw_wave,resnet50,0.5499999999999999
+pdraw_wave,vgg16,0.44999999999999996
+pdraw_wave,efficientnet_b0,0.35
+pdraw_wave,mobilenet_v3_large,0.65

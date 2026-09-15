@@ -1,0 +1,36 @@
+C:\Users\ramti\Desktop\ramtin legion pc\article_project\src\run_xai.py:131: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  "pearson_clean": round(float(pearsonr(
+C:\Users\ramti\Desktop\ramtin legion pc\article_project\src\run_xai.py:133: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  "spearman_clean": round(float(spearmanr(
+[xai] handpd_spiral: subset of 10 images, models=['resnet50', 'vgg16', 'efficientnet_b0']
+  resnet50         0289-4: done
+  resnet50         0104-2: done
+  resnet50         0287-3: done
+  resnet50         0104-1: done
+  resnet50         0127-2: done
+  resnet50         0054-4: done
+  resnet50         0218-4: done
+  resnet50         0196-3: done
+  resnet50         0149-1: done
+  resnet50         0003-2: done
+  vgg16            0289-4: done
+  vgg16            0104-2: done
+  vgg16            0287-3: done
+  vgg16            0104-1: done
+  vgg16            0127-2: done
+  vgg16            0054-4: done
+  vgg16            0218-4: done
+  vgg16            0196-3: done
+  vgg16            0149-1: done
+  vgg16            0003-2: done
+  efficientnet_b0  0289-4: done
+  efficientnet_b0  0104-2: done
+  efficientnet_b0  0287-3: done
+  efficientnet_b0  0104-1: done
+  efficientnet_b0  0127-2: done
+  efficientnet_b0  0054-4: done
+  efficientnet_b0  0218-4: done
+  efficientnet_b0  0196-3: done
+  efficientnet_b0  0149-1: done
+  efficientnet_b0  0003-2: done
+[xai] saved -> ..\results\parts\xai_handpd_spiral.csv

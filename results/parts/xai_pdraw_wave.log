@@ -1,0 +1,36 @@
+C:\Users\ramti\Desktop\ramtin legion pc\article_project\src\run_xai.py:131: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  "pearson_clean": round(float(pearsonr(
+C:\Users\ramti\Desktop\ramtin legion pc\article_project\src\run_xai.py:133: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  "spearman_clean": round(float(spearmanr(
+[xai] pdraw_wave: subset of 10 images, models=['resnet50', 'vgg16', 'efficientnet_b0']
+  resnet50         V09HO01: done
+  resnet50         V55HO10: done
+  resnet50         V08HO01: done
+  resnet50         V07HO01: done
+  resnet50         V55HO11: done
+  resnet50         V03PO01: done
+  resnet50         V11PO01: done
+  resnet50         V08PO01: done
+  resnet50         V06PO01: done
+  resnet50         V03PO07: done
+  vgg16            V09HO01: done
+  vgg16            V55HO10: done
+  vgg16            V08HO01: done
+  vgg16            V07HO01: done
+  vgg16            V55HO11: done
+  vgg16            V03PO01: done
+  vgg16            V11PO01: done
+  vgg16            V08PO01: done
+  vgg16            V06PO01: done
+  vgg16            V03PO07: done
+  efficientnet_b0  V09HO01: done
+  efficientnet_b0  V55HO10: done
+  efficientnet_b0  V08HO01: done
+  efficientnet_b0  V07HO01: done
+  efficientnet_b0  V55HO11: done
+  efficientnet_b0  V03PO01: done
+  efficientnet_b0  V11PO01: done
+  efficientnet_b0  V08PO01: done
+  efficientnet_b0  V06PO01: done
+  efficientnet_b0  V03PO07: done
+[xai] saved -> ..\results\parts\xai_pdraw_wave.csv
