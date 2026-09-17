@@ -1,4 +1,4 @@
-# Robustness Framework for Deep-Learning Parkinson's Disease Detection from Drawings
+# PD-RobustBench: A Robustness and Explainability Benchmark for Parkinson’s Disease Screening from Hand-Drawn Images
 
 `PD-RobustBench` — a reproducible evaluation framework that measures how much
 deep-learning models for **Parkinson's disease (PD) detection from
