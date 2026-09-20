@@ -120,7 +120,7 @@ def train_one(dtype: str, model_name: str, device, seed: int = SEED) -> dict:
     train_items, val_items = stratified_val_split(trainval, seed=seed)
     t0 = time.time()
 
-    # ---- stage 1: train the head on cached frozen-backbone features -------
+    # stage 1: train the head on cached frozen-backbone features
     backbone, _ = build_feature_extractor(model_name)
     backbone.to(device).eval()
     f_tr, y_tr = extract_features(backbone, train_items, device)
@@ -129,7 +129,7 @@ def train_one(dtype: str, model_name: str, device, seed: int = SEED) -> dict:
         f_tr, y_tr, f_va, y_va, device)
     del backbone
 
-    # ---- stage 2: light fine-tuning of the last backbone stage ------------
+    # stage 2: light fine-tuning of the last backbone stage
     model = PDClassifier(model_name, head_state=head_state).to(device)
     stage = last_stage_module(model)
     for p in stage.parameters():
@@ -166,11 +166,11 @@ def train_one(dtype: str, model_name: str, device, seed: int = SEED) -> dict:
                 break
     model.load_state_dict(best["state"])
 
-    # ---- decision threshold on the validation split -----------------------
+    # decision threshold on the validation split
     y_v, p_v = _val_probs(model, val_items, device)
     thr = best_threshold(y_v, p_v)
 
-    # ---- persist only what changes: head + fine-tuned last stage ----------
+    # persist only what changes: head + fine-tuned last stage
     stage_state = {k: v.detach().cpu() for k, v in stage.state_dict().items()}
     ckpt_path = CKPT_DIR / ckpt_name(dtype, model_name, seed)
     torch.save({"model": model_name, "dtype": dtype, "seed": seed,
