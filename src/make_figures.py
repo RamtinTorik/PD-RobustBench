@@ -48,10 +48,8 @@ DTYPE_LABELS = {"pdraw_spiral": "Parkinson's Drawings - Spiral",
                 "handpd_meander": "HandPD - Meander"}
 
 
-# ---------------------------------------------------------------------------
 # Figures
-# ---------------------------------------------------------------------------
-def fig_dataset_samples():
+ fig_dataset_samples():
     from PIL import Image
     items = list_items("pdraw_spiral", "test")
     fig, axes = plt.subplots(2, 4, figsize=(8, 4.2))
@@ -197,9 +195,7 @@ def fig_gradcam_grid(dtype: str = "pdraw_spiral", model: str = "resnet50"):
     engine.close()
 
 
-# ---------------------------------------------------------------------------
 # Tables
-# ---------------------------------------------------------------------------
 def table_clean_performance():
     df = pd.read_csv(RESULTS_DIR / "robustness_results.csv")
     clean = df[df.condition_type == "clean"].copy()
