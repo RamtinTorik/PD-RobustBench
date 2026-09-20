@@ -57,7 +57,7 @@ def bootstrap_ci(y, p, thr):
 
 
 def main():
-    # ---- 1. bootstrap CIs on clean predictions ---------------------------
+    # 1. bootstrap CIs on clean predictions
     preds = pd.read_csv(RESULTS_DIR / "predictions.csv")
     clean = preds[preds.corruption == "clean"]
     rows = []
@@ -82,7 +82,7 @@ def main():
                      f"{r.point:.3f} & [{r.ci_low:.3f}, {r.ci_high:.3f}] {chr(92)*2}")
     (TABLES_DIR / "table_ci_rows.tex").write_text("\n".join(lines) + "\n")
 
-    # ---- 2. parameter counts ---------------------------------------------
+    # 2. parameter counts
     from models import PDClassifier, last_stage_module
     prows = []
     for m in ["resnet50", "vgg16", "efficientnet_b0", "mobilenet_v3_large"]:
@@ -98,7 +98,7 @@ def main():
               for _, r in pd.DataFrame(prows).iterrows()]
     (TABLES_DIR / "table_params_rows.tex").write_text("\n".join(plines) + "\n")
 
-    # ---- 3. thresholds -----------------------------------------------------
+    # 3. thresholds
     trows = []
     for dtype in available_datasets():
         for m in ["resnet50", "vgg16", "efficientnet_b0", "mobilenet_v3_large"]:
