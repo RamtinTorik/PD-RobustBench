@@ -6,9 +6,7 @@ All paths, seeds, model list, corruption definitions and score weights live here
 """
 from pathlib import Path
 
-# ---------------------------------------------------------------------------
 # Paths
-# ---------------------------------------------------------------------------
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = PROJECT_ROOT / "data"
 RAW_DIR = DATA_DIR / "raw"                # prepared datasets (copied/unzipped here)
@@ -20,9 +18,8 @@ DOCS_DIR = PROJECT_ROOT / "docs"
 XAI_DIR = PROJECT_ROOT / "xai_outputs"    # saved Grad-CAM heatmaps
 CKPT_DIR = PROJECT_ROOT / "checkpoints"
 
-# ---------------------------------------------------------------------------
+
 # Reproducibility / training
-# ---------------------------------------------------------------------------
 SEED = 42
 IMG_SIZE = 224
 BATCH_SIZE = 16
@@ -30,15 +27,11 @@ HEAD_EPOCHS = 15          # only the classifier head is trained (light fine-tune
 HEAD_LR = 1e-3
 VAL_FRACTION = 0.2        # stratified val split carved out of the training split
 
-# ---------------------------------------------------------------------------
 # Models (torchvision, ImageNet weights, frozen backbone + light head)
-# ---------------------------------------------------------------------------
 MODELS = ["resnet50", "vgg16", "efficientnet_b0", "mobilenet_v3_large"]
 
-# ---------------------------------------------------------------------------
-# Corruption benchmark  (mirrors ImageNet-C design: 8 families x 5 severities)
+Corruption benchmark  (mirrors ImageNet-C design: 8 families x 5 severities)
 # Values are the *parameters* of each severity level (1 = mildest ... 5 = strongest).
-# ---------------------------------------------------------------------------
 CORRUPTION_LEVELS = {
     "jpeg_compression": [90, 70, 50, 30, 10],       # JPEG quality factor (lower = stronger)
     "gaussian_blur":    [3, 5, 7, 9, 11],           # Gaussian kernel size (odd), sigma derived
@@ -50,9 +43,7 @@ CORRUPTION_LEVELS = {
     "rotation":         [-5, 10, -15, 20, -25],     # degrees, alternating direction, white fill
 }
 
-# ---------------------------------------------------------------------------
 # Robustness score (PRS) weights: accuracy drop, F1 drop, XAI instability
-# ---------------------------------------------------------------------------
 W_ACC, W_F1, W_XAI = 0.5, 0.3, 0.2
 
 # Number of test images per class used for the XAI subset (5 PD + 5 healthy)
