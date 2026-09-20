@@ -42,9 +42,7 @@ HANDPD_TMP = DATA_DIR / "handpd_tmp"
 IMAGE_EXTS = (".png", ".jpg", ".jpeg")
 
 
-# ---------------------------------------------------------------------------
 # Preparation
-# ---------------------------------------------------------------------------
 def prepare_pdraw() -> dict:
     """Copy the Kaggle Parkinson's Drawings PNGs into data/raw/pdraw_<dtype>/."""
     out = {}
@@ -114,10 +112,8 @@ def prepare_all() -> dict:
     return stats
 
 
-# ---------------------------------------------------------------------------
 # Listing / loading
-# ---------------------------------------------------------------------------
-def available_datasets() -> list:
+ available_datasets() -> list:
     """Return keys of prepared dataset types, e.g. ['pdraw_spiral', ...]."""
     keys = []
     for d in sorted(RAW_DIR.iterdir()):
